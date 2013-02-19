@@ -1,0 +1,11 @@
+{"name": "HTML Object Creator",
+  "version": "1.0.2",
+  "manifest_version": 2,
+  "description": "Allows the creation of HTML Object Maps.",
+  "devtools_page": "devtools.html",
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ]
+}
