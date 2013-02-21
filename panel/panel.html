@@ -5,54 +5,59 @@
   <link rel="stylesheet" type="text/css" href="../vendor/stylesheets/foundation.min.css">
 </head>
 <body>
-  <h3>New Object Map</h3>
   <div class="row">
-    <div class="six columns">
-      <form id='new_object_map'>
-        <div class="row">
-          <div class="four columns">
-            <label for="new_object_id">ID</label>
-            <input type="text" name="new_object_id">
-          </div>
-          <div class="four columns">
-            <label for="new_object_class">Class</label>
-            <input type="text" name="new_object_class">
-          </div>
-          <div class="four columns">
-            <label for="new_object_name">Name</label>
-            <input type="text" name="new_object_name">
-          </div>
+    <div class="twelve columns">
+      <h3>New Object Map</h3>
+      <div class="row">
+        <div class="six columns">
+          <form id='new_object_map'>
+            <div class="row">
+              <div class="four columns">
+                <label for="new_object_id">ID</label>
+                <input type="text" name="new_object_id">
+              </div>
+              <div class="four columns">
+                <label for="new_object_class">Class</label>
+                <input type="text" name="new_object_class">
+              </div>
+              <div class="four columns">
+                <label for="new_object_name">Name</label>
+                <input type="text" name="new_object_name">
+              </div>
+            </div>
+            <div class="row">
+              <div class="four columns">
+                <label for="new_object_tag">Tag</label>
+                <input type="text" name="new_object_tag">
+              </div>
+              <div class="four columns">
+                <label for="new_object_type">Type</label>
+                <input type="text" name="new_object_type">
+              </div>
+              <div class="four columns">
+                <label for="new_object_content">Content</label>
+                <input type="text" name="new_object_content">
+              </div>
+            </div>
+            <label for="new_object_xpath">Xpath</label>
+            <input type="text" name="new_object_xpath">
+            <br>
+            <input type="submit" value="Save" class="button">
+          </form>
         </div>
-        <div class="row">
-          <div class="four columns">
-            <label for="new_object_tag">Tag</label>
-            <input type="text" name="new_object_tag">
-          </div>
-          <div class="four columns">
-            <label for="new_object_type">Type</label>
-            <input type="text" name="new_object_type">
-          </div>
-          <div class="four columns">
-            <label for="new_object_content">Content</label>
-            <input type="text" name="new_object_content">
-          </div>
+        <div class="six columns panel">
+          <h5>Selected object</h5>
+          <p>
+            Suggested name: <span id="suggested_name"> </span> 
+          </p>
+          <p>
+            Object locator: <span id="object_locator"> </span> 
+          </p>
+          <p>
+            Object type: <span id="object_type"> </span> 
+          </p>
         </div>
-        <label for="new_object_xpath">Xpath</label>
-        <input type="text" name="new_object_xpath">
-        <br>
-        <input type="submit" value="Save" class="button">
-      </form>
-    </div>
-    <div class="six columns panel">
-      <p>
-        Suggested name: <span id="suggested_name"> </span> 
-      </p>
-      <p>
-        Object locator: <span id="object_locator"> </span> 
-      </p>
-      <p>
-        Object type: <span id="object_type"> </span> 
-      </p>
+      </div>
     </div>
   </div>
 </body>
