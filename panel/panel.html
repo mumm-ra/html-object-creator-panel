@@ -1,52 +1,59 @@
 <html>
 <head>
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
   <script src="panel.js"></script>
-  <link rel="stylesheet" type="text/css" href="panel_styles.css">
+  <link rel="stylesheet" type="text/css" href="../vendor/stylesheets/foundation.min.css">
 </head>
 <body>
-<h2>HTML Object Creator</h2>
-  <div id='nom_container' style='width:100%;padding:6px 12px 6px 12px'>
-
-  <h1>New Object Map</h1>
-    <div id="nom_info">
-    <p>
-      Suggested name: <span id="suggested_name"> </span> 
-    </p>
-    <p>
-      Object locator: <span id="object_locator"> </span> 
-    </p>
-    <p>
-      Object type: <span id="object_type"> </span> 
-    </p>
+  <h3>New Object Map</h3>
+  <div class="row">
+    <div class="six columns">
+      <form id='new_object_map'>
+        <div class="row">
+          <div class="four columns">
+            <label for="new_object_id">ID</label>
+            <input type="text" name="new_object_id">
+          </div>
+          <div class="four columns">
+            <label for="new_object_class">Class</label>
+            <input type="text" name="new_object_class">
+          </div>
+          <div class="four columns">
+            <label for="new_object_name">Name</label>
+            <input type="text" name="new_object_name">
+          </div>
+        </div>
+        <div class="row">
+          <div class="four columns">
+            <label for="new_object_tag">Tag</label>
+            <input type="text" name="new_object_tag">
+          </div>
+          <div class="four columns">
+            <label for="new_object_type">Type</label>
+            <input type="text" name="new_object_type">
+          </div>
+          <div class="four columns">
+            <label for="new_object_content">Content</label>
+            <input type="text" name="new_object_content">
+          </div>
+        </div>
+        <label for="new_object_xpath">Xpath</label>
+        <input type="text" name="new_object_xpath">
+        <br>
+        <input type="submit" value="Save" class="button">
+      </form>
     </div>
-  <form id='new_object_map'>
-    <div class="dp33">
-      <label for="new_object_id">ID</label>
-      <input type="text" name="new_object_id">
-      <br>
-      <label for="new_object_class">Class</label>
-      <input type="text" name="new_object_class">
-      <br>
-      <label for="new_object_name">Name</label>
-      <input type="text" name="new_object_name">
+    <div class="six columns panel">
+      <p>
+        Suggested name: <span id="suggested_name"> </span> 
+      </p>
+      <p>
+        Object locator: <span id="object_locator"> </span> 
+      </p>
+      <p>
+        Object type: <span id="object_type"> </span> 
+      </p>
     </div>
-    <div class="dp33">
-      <label for="new_object_tag">Tag</label>
-      <input type="text" name="new_object_tag">
-      <br>
-      <label for="new_object_xpath">Xpath</label>
-      <input type="text" name="new_object_xpath">
-      <br>
-      <label for="new_object_content">Content</label>
-      <input type="text" name="new_object_content">
-    </div>
-    <div class="dp33">
-      <label for="new_object_type">Type</label>
-      <input type="text" name="new_object_type">
-      <br>
-      <input type="submit" value="Save" onclick="console.log('clicked');">
-    </div>
-  </form>
   </div>
 </body>
 </html>
