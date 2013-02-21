@@ -101,20 +101,25 @@ Selector = {
           $('#suggested_name').html(Selector.suggested_name(element_name,element_content));
           $('#object_locator').html(Selector.object_locator(element_id,element_xpath));
           $('#object_type').html(Selector.object_type(element_tag,element_type));
-          // console.log("this", this);
-          // console.log("xpath", element_xpath);
-          // console.log("id", element_id);
-          // console.log("class", element_class);
-          // console.log("tag", element_tag);
-          // console.log("name", element_name);
-          // console.log("type", element_type);
-          // console.log("content", element_content);
-          alert('sending message!');
+          
+          var selected_object = {
+            'xpath': element_xpath,
+            'id':element_id,
+            'class':element_class,
+            'tag':element_tag,
+            'name':element_name,
+            'type':element_type,
+            'content':element_content,
+            'extra':'--'
+          };
 
-          chrome.extension.sendMessage({"message": 'newObject'}, function(response) {
+          chrome.extension.sendMessage({'selected_object': selected_object}, function(response) {
             console.log(response);
           });
-
+          // port = chrome.extension.connect('1');
+          // port.postMessage({"message": 'newObject'}, function(response) {
+          //   console.log(response);
+          // });
           $('body').off('mouseover mouseout click','*');
 
         break;
