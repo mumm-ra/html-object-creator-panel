@@ -6,15 +6,29 @@
 </head>
 <body>
   <div class="row">
-    <div class="six columns">
+    <div class="ten columns">
       <h3>New Object Map</h3>
     </div>
-    <div class="six columns">
+    <div class="two columns">
       <br>
-      <a href="#" id="highlight" class="small button">Highlight!</a>
+      <a href="#" id="highlight" class="small button right">Highlight!</a>
     </div>
   </div>
   <div class="row">
+    <div class="six columns">
+      <div class="panel">
+        <h5>Selected object</h5>
+        <p>
+          Suggested name: <span id="suggested_name"> </span> 
+        </p>
+        <p>
+          Object locator: <span id="object_locator"> </span> 
+        </p>
+        <p>
+          Object type: <span id="object_type"> </span> 
+        </p>
+      </div>
+    </div>
     <div class="six columns">
       <form id='new_object_map'>
         <div class="row">
@@ -45,26 +59,19 @@
             <input type="text" name="new_object_content">
           </div>
         </div>
-        <label for="new_object_xpath">Xpath</label>
-        <input type="text" name="new_object_xpath">
-        <br>
-        <input type="submit" value="Save" class="success button">
+        <div class="row">
+          <div class="eight columns">
+            <label for="new_object_xpath">Xpath</label>
+            <input type="text" name="new_object_xpath">
+          </div>
+          <div class="four columns">
+            <br>
+            <input type="submit" value="Save" class="success button right">
+          </div>
+        </div>
       </form>
     </div>
-    <div class="six columns">
-      <div class="panel">
-        <h5>Selected object</h5>
-        <p>
-          Suggested name: <span id="suggested_name"> </span> 
-        </p>
-        <p>
-          Object locator: <span id="object_locator"> </span> 
-        </p>
-        <p>
-          Object type: <span id="object_type"> </span> 
-        </p>
-      </div>
-    </div>
+
   </div>
 </body>
 </html>
