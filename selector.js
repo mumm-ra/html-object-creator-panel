@@ -111,6 +111,11 @@ Selector = {
             'type':element_type,
             'content':element_content,
             'extra':'--'
+            'extra': {
+              'suggested_name': Selector.suggested_name(element_name,element_content),
+              'object_locator': Selector.object_locator(element_id,element_xpath),
+              'object_type': Selector.object_type(element_tag,element_type)
+            }
           };
 
           chrome.extension.sendMessage({'selected_object': selected_object}, function(response) {
