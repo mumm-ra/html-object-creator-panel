@@ -74,33 +74,13 @@ Selector = {
           event.stopPropagation();
           event.preventDefault();
 
-          $('input[name*="new_object_"]').val();
-
           element_xpath = Selector.xpath(event);
-          $('input[name="new_object_xpath"]').val(element_xpath);
-
           element_id = this.id;
-          $('input[name="new_object_id"]').val(element_id);
-
           element_class = this.classList.toString();
-          $('input[name="new_object_class"]').val(element_class);
-
           element_tag = this.tagName;
-          $('input[name="new_object_tag"]').val(element_tag);
-
           element_name = this.name;
-          $('input[name="new_object_name"]').val(element_name);
-
           element_type = this.type;
-          $('input[name="new_object_type"]').val(element_type);
-
-          element_content = $(this).html();
-          $('input[name="new_object_content"]').val(element_content);
-
-
-          $('#suggested_name').html(Selector.suggested_name(element_name,element_content));
-          $('#object_locator').html(Selector.object_locator(element_id,element_xpath));
-          $('#object_type').html(Selector.object_type(element_tag,element_type));
+          element_content = $(this).html();          
           
           var selected_object = {
             'xpath': element_xpath,
@@ -110,7 +90,6 @@ Selector = {
             'name':element_name,
             'type':element_type,
             'content':element_content,
-            'extra':'--'
             'extra': {
               'suggested_name': Selector.suggested_name(element_name,element_content),
               'object_locator': Selector.object_locator(element_id,element_xpath),
@@ -121,10 +100,6 @@ Selector = {
           chrome.extension.sendMessage({'selected_object': selected_object}, function(response) {
             console.log(response);
           });
-          // port = chrome.extension.connect('1');
-          // port.postMessage({"message": 'newObject'}, function(response) {
-          //   console.log(response);
-          // });
           $('body').off('mouseover mouseout click','*');
 
         break;
@@ -133,10 +108,6 @@ Selector = {
   }
 
 }
-
-alert('Selector file loaded');
-
 $(document).ready(function(){
-  alert('Client doc is ready');
   $('body').on('mouseover mouseout click','*', Selector.highlighter);
 });
